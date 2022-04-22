@@ -3,4 +3,5 @@
     <string name="edit_message">Hello what is your name?</string>
     <string name="button_send">Send</string>
     <string name="age_text">What is your age?</string>
+    <string name="tips_link"><a href='https://www.wikihow.com/Get-Fit'>Vinkkejä laihduttamiseen!</a></string>
 </resources>

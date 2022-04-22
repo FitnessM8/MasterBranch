@@ -8,13 +8,43 @@
 
     <TextView
         android:id="@+id/textViewBMI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:layout_width="321dp"
+        android:layout_height="211dp"
+        android:text="BMI"
+        android:textAlignment="center"
+        android:textSize="96sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193" />
+
+    <Button
+        android:id="@+id/buttonTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:background="@color/backgroundcolor"
+        android:text="@string/tips_link"
+        android:textColor="@color/material_dynamic_neutral0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.557" />
+
+    <TextView
+        android:id="@+id/textViewLastResult"
+        android:layout_width="183dp"
+        android:layout_height="126dp"
+        android:text="Viime tuloksesi: 25.7"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79" />
 </androidx.constraintlayout.widget.ConstraintLayout>
