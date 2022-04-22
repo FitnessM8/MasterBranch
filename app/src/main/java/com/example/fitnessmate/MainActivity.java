@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 
 import com.example.fitnessmate.DisplayMessageActivity;
@@ -17,21 +18,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
     }
 
 
     /** Called when the user taps the Send button */
-    public void sendMessage(View view){
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.Name);
-        EditText editAge = (EditText) findViewById(R.id.Age);
-        String message = editText.getText().toString();
-        String ageMessage = editAge.getText().toString();
-        intent.putExtra(Name_TEXT, "Hello " + message +  ", you are " + ageMessage + " years old");
-        startActivity(intent);
 
-    }
 
 
 }
