@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.util.Log;
+import android.widget.Button;
+import android.view.View;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
     public SeekBar ageBar;
     public SeekBar weightBar;
     public SeekBar heightBar;
-    public TextView ageText;
-    public TextView weightText;
-    public TextView heightText;
+    public static TextView ageText;
+    public static TextView weightText;
+    public static TextView heightText;
+    Button Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         ageText = (TextView) findViewById(R.id.Age_Number);
         weightText = (TextView) findViewById(R.id.Weight_Number);
         heightText = (TextView) findViewById(R.id.height_Number2);
+        Button = (Button) findViewById(R.id.Calculate_Button);
+
+        weightBar.setMax(300);
+        heightBar.setMax(200);
 
 
         ageBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -81,6 +90,37 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+            Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                double bmi = 0;
+                double valueheight = 0;
+                double valueweight = 0;
+                Double valueheightmeters;
+
+                valueheight =Double.parseDouble(heightText.getText().toString());
+                valueweight =Double.parseDouble(weightText.getText().toString());
+
+                valueheightmeters = valueheight / 100; // Converting to meters.
+
+                bmi = (valueweight / (valueheightmeters * valueheightmeters));
+
+                Log.d("Tag", String.valueOf(bmi));
+
+                if (bmi >= 30) {
+                    Log.d("Lihavuus", String.valueOf(bmi));
+                } else if (bmi >= 25) {
+                    Log.d("Lievä lihavuus", String.valueOf(bmi));
+                } else if (bmi >= 18.5) {
+                    Log.d("Normaali paino", String.valueOf(bmi));
+                } else {
+                    Log.d("Alipaino", String.valueOf(bmi));
+                }
 
             }
         });
