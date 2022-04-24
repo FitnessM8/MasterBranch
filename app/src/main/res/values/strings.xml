@@ -4,4 +4,5 @@
     <string name="button_send">Send</string>
     <string name="age_text">What is your age?</string>
     <string name="tips_link"><a href='https://www.wikihow.com/Get-Fit'>Vinkkejä laihduttamiseen!</a></string>
+    <color name="ligh_green">#B7FFA8</color>
 </resources>

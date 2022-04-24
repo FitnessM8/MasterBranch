@@ -14,12 +14,12 @@ public class DisplayResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_result);
 
         Intent intent = getIntent();
-        Bundle nameAndAge = intent.getExtras();
-        String nameMessage = nameAndAge.getString("NAME_MESSAGE");
-        String ageMessage = nameAndAge.getString("AGE_MESSAGE");
+        Bundle bmiAndPre = intent.getExtras();
+        String bmiMessage = bmiAndPre.getString("BMI_MESSAGE");
+        String preBMIMessage = bmiAndPre.getString("PRE_BMI_MESSAGE");
 
-        TextView textView = findViewById(R.id.textViewBMI);
-        textView.setText("Hello " + nameMessage + ", you are " + ageMessage + " year old");
+        TextView textViewBMI = findViewById(R.id.textViewBMI);
+        textViewBMI.setText("Your BMI is: " + bmiMessage);
 
     }
 }

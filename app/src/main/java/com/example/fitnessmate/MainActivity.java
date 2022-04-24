@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Button = (Button) findViewById(R.id.Calculate_Button);
 
         weightBar.setMax(300);
-        heightBar.setMax(200);
+        heightBar.setMax(300);
 
         ageBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
