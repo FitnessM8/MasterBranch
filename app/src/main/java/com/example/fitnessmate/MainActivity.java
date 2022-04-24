@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
-
+//The application will display without Title
 
         ageBar = (SeekBar) findViewById(R.id.Age_SeekBar);
         weightBar = (SeekBar) findViewById(R.id.Weight_SeekBar);
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         ageText = (TextView) findViewById(R.id.Age_Number);
         weightText = (TextView) findViewById(R.id.Weight_Number);
         heightText = (TextView) findViewById(R.id.height_Number2);
+
 
         ageBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
