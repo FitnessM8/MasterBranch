@@ -1,15 +1,16 @@
 package com.example.fitnessmate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.util.Log;
 import android.widget.Button;
 import android.view.View;
-import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     public static TextView weightText;
     public static TextView heightText;
     Button Button;
+    ImageView male, female;
+    String typeofuser = "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,28 @@ public class MainActivity extends AppCompatActivity {
 
         weightBar.setMax(300);
         heightBar.setMax(200);
+
+        male = findViewById(R.id.Male);
+        female = findViewById(R.id.Female);
+
+        male.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.genderselected));
+                female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.gendernotselected));
+                typeofuser = "Memale";
+            }
+        });
+
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.genderselected));
+                male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.gendernotselected));
+                typeofuser = "Female";
+            }
+        });
+
 
 
         ageBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -94,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-            Button.setOnClickListener(new View.OnClickListener() {
+        Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -103,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
                 double valueweight = 0;
                 Double valueheightmeters;
 
-                valueheight =Double.parseDouble(heightText.getText().toString());
-                valueweight =Double.parseDouble(weightText.getText().toString());
+                valueheight = Double.parseDouble(heightText.getText().toString());
+                valueweight = Double.parseDouble(weightText.getText().toString());
 
                 valueheightmeters = valueheight / 100; // Converting to meters.
 

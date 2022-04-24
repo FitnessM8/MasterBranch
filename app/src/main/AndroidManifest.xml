@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessMate">
         <activity
-            android:name=".DisplayResultActivity"
+            android:name=".MainActivity"
+            android:exported="false" />// MainActivity ja SplashActivity paikat vaihdettu keskenään
+        <activity
+            android:name=".DisplayMessageActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,11 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FitnessM8/app/src/main/res/layout/activity_display_message.xml" value="0.11574074074074074" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/FitnessM8/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FitnessM8/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/Matias/AndroidStudioProjects/Fitnessmateuusi/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2335" />
         <entry key="..\:/Users/Matias/AndroidStudioProjects/Fitnessmateuusi/app/src/main/res/drawable/calculatebuttoncolor.xml" value="0.2335" />
+        <entry key="..\:/Users/Matias/AndroidStudioProjects/Fitnessmateuusi/app/src/main/res/drawable/malefemalefocus.xml" value="0.1" />
+        <entry key="..\:/Users/Matias/AndroidStudioProjects/Fitnessmateuusi/app/src/main/res/drawable/malefemalenotfocus.xml" value="0.1605" />
         <entry key="..\:/Users/Matias/AndroidStudioProjects/Fitnessmateuusi/app/src/main/res/layout/activity_display_message.xml" value="0.1921875" />
         <entry key="..\:/Users/Matias/AndroidStudioProjects/Fitnessmateuusi/app/src/main/res/layout/activity_main.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Matias/AndroidStudioProjects/Fitnessmateuusi/app/src/main/res/layout/activity_splash.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/arber_3lw36u2/AndroidStudioProjects/MasterBranch/app/src/main/res/layout/activity_display_result.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/arber_3lw36u2/AndroidStudioProjects/MasterBranch/app/src/main/res/layout/activity_main.xml" value="0.11302083333333333" />
       </map>
