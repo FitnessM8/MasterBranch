@@ -17,7 +17,6 @@ public class CalculateButton extends AppCompatActivity {
     private static String bmiString;
     private static String bmiResult;
 
-
     public void onClick(View view, TextView weightText, TextView heightText) {
 
         valueheight = Double.parseDouble(heightText.getText().toString());
@@ -26,7 +25,7 @@ public class CalculateButton extends AppCompatActivity {
         valueheightmeters = valueheight / 100; // Converting to meters.
 
         bmi = (valueweight / (valueheightmeters * valueheightmeters));
-        bmiString = Double.toString(bmi);
+        bmiString = String.format("%.1f" , bmi);
 
         Log.d("Tag", String.valueOf(valueheightmeters));
 
