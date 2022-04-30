@@ -3,19 +3,19 @@ package com.example.fitnessmate;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.util.Log;
 import android.widget.Button;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String BMI_RESULT_STRING = "bmiResultString";
+    public static final String BMI_RESULT_Number = "bmiResultNumber";
 
-    public static final String Name_TEXT = "com.example.myfirstapp.MESSAGE";
-    public static final String AGE_TEXT = "com.example.myfirstapp.AGE";
     public SeekBar ageBar;
     public SeekBar weightBar;
     public SeekBar heightBar;
@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView male, female;
     String typeofuser = "0";
 
-    CalculateButton onclick = new CalculateButton();
+    CalculateButton bmiCalculateButton = new CalculateButton();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         heightText = (TextView) findViewById(R.id.height_Number2);
         button = (Button) findViewById(R.id.Calculate_Button);
         weightBar.setMax(300);
-        heightBar.setMax(200);
+        heightBar.setMax(220);
 
         male = findViewById(R.id.Male);
         female = findViewById(R.id.Female);
@@ -63,19 +64,33 @@ public class MainActivity extends AppCompatActivity {
                 female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.genderselected));
                 male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.gendernotselected));
                 typeofuser = "Female";
-            }
-        });
+                    }
+                });
+
 
         BarListener.barListener(ageBar, ageText);
         BarListener.barListener(weightBar, weightText);
         BarListener.barListener(heightBar, heightText);
 
+
+//lähetetään tekstikenttien arvot calculateButton classiin
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onclick.onClick(view, weightText, heightText);
+                bmiCalculateButton.onClick(view, weightText, heightText);
+
+                String bmi = bmiCalculateButton.haeBmi();
+                String bmiLuokka = bmiCalculateButton.haeLuokitus();
+
+                Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
+                intent.putExtra(BMI_RESULT_Number, bmi);
+                intent.putExtra(BMI_RESULT_STRING, bmiLuokka);
+                startActivity(intent);
             }
         });
 
+
     }
+
+
 }

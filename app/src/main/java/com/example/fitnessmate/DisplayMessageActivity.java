@@ -1,5 +1,10 @@
 package com.example.fitnessmate;
 
+
+import static com.example.fitnessmate.MainActivity.BMI_RESULT_Number;
+
+import static com.example.fitnessmate.MainActivity.BMI_RESULT_STRING;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,14 +21,12 @@ public class DisplayMessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_message);
 
 
-        /** Get the Intent that started this activity and extract the string*/
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(com.example.fitnessmate.MainActivity.Name_TEXT);
-
-        /** Capture the layout's TextView and set the string as its text*/
-        TextView textView = findViewById(R.id.textView);
-        textView.setText(message);
+        Bundle extras = getIntent().getExtras();
+        String bmiNumber = extras.getString(BMI_RESULT_Number);
+        String bmiString = extras.getString(BMI_RESULT_STRING);
 
 
+        ((TextView) findViewById(R.id.bmi_result)).setText(bmiNumber);
+        ((TextView) findViewById(R.id.bmi_result_number)).setText(bmiString);
     }
 }
