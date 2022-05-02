@@ -17,7 +17,6 @@ public class CalculateButton extends AppCompatActivity {
     private static String bmiString;
     private static String bmiResult;
 
-
     public void onClick(View view, TextView weightText, TextView heightText) {
 
         valueheight = Double.parseDouble(heightText.getText().toString());
