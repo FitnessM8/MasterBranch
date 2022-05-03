@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView male, female;
     String typeofuser = "0";
 
-    CalculateButton bmiCalculateButton = new CalculateButton();
+    Calculation bmiCalculateButton = new Calculation();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

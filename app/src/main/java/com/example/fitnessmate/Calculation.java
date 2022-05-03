@@ -8,7 +8,7 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import javax.xml.transform.Result;
 
-public class CalculateButton extends AppCompatActivity {
+public class Calculation extends AppCompatActivity {
 
     double bmi = 0;
     double valueheight = 0;
