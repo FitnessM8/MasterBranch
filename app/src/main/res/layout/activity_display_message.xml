@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.203" />
 
     <TextView
-        android:id="@+id/bmi_text"
+        android:id="@+id/previous_bmi_results_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TULOKSESI ON:"
@@ -74,6 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/default_button"
+        android:onClick="previousResults"
         android:text="Edelliset tulokset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

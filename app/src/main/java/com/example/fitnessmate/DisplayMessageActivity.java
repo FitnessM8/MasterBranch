@@ -48,4 +48,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
         Intent backIntent = new Intent(DisplayMessageActivity.this, MainActivity.class);
         startActivity(backIntent);
     };
+
+    public void previousResults(View view) {
+        Intent previousresults = new Intent(DisplayMessageActivity.this, PreviousResults.class);
+        startActivity(previousresults);
+    };
 }

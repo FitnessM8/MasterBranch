@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessMate">
         <activity
+            android:name=".PreviousResults"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="false" />// MainActivity ja SplashActivity paikat vaihdettu keskenään
+            android:exported="false" />
         <activity
             android:name=".DisplayMessageActivity"
             android:exported="false" />
