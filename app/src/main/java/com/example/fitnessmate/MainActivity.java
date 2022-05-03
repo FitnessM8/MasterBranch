@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.SeekBar;
@@ -77,15 +78,21 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bmiCalculateButton.onClick(view, weightText, heightText);
 
-                String bmi = bmiCalculateButton.haeBmi();
-                String bmiLuokka = bmiCalculateButton.haeLuokitus();
+                if (weightText.getText().toString().equals("0") | heightText.getText().toString().equals("0") | ageText.getText().toString().equals("0"))  {
+                    Log.d("Error", String.valueOf(weightText));
+                }
+                else {
+                    bmiCalculateButton.onClick(view, weightText, heightText);
 
-                Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
-                intent.putExtra(BMI_RESULT_Number, bmi);
-                intent.putExtra(BMI_RESULT_STRING, bmiLuokka);
-                startActivity(intent);
+                    String bmi = bmiCalculateButton.haeBmi();
+                    String bmiLuokka = bmiCalculateButton.haeLuokitus();
+
+                    Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
+                    intent.putExtra(BMI_RESULT_Number, bmi);
+                    intent.putExtra(BMI_RESULT_STRING, bmiLuokka);
+                    startActivity(intent);
+                }
             }
         });
 
