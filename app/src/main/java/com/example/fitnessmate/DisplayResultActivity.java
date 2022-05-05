@@ -14,6 +14,15 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+/**
+arbër — tänään klo 20.14
+
+ This class call for the activity when the user want to see the BMI result.
+ It gets the information from the MainActivity.java and Calculation.java and displays them here.
+ It also has a couple of intents to move from activity to another.
+
+ @author Arbër Zeqiri
+ */
 
 /**
 This class call for the activity when the user want to see the BMI result.
@@ -35,11 +44,16 @@ public class DisplayResultActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_display_message);
 
+        /**
+         * getting values from mainactivity
+         */
         Bundle extras = getIntent().getExtras();
         String bmiNumber = extras.getString(BMI_RESULT_Number);
         String bmiString = extras.getString(BMI_RESULT_STRING);
 
-
+/**
+ * Setting values to textviews
+ */
         ((TextView) findViewById(R.id.bmi_result)).setText(bmiNumber);
         ((TextView) findViewById(R.id.bmi_result_number)).setText(bmiString);
     }
