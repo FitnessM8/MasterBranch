@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
          * Setting Max values for seekbars
          */
         weightBar.setMax(300);
-        heightBar.setMax(220);
+        heightBar.setMax(300);
 
         /**
          * Getting female and male imageViews from activity_main.xml
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (weightText.getText().toString().equals("0") | heightText.getText().toString().equals("0") | ageText.getText().toString().equals("0")) {
+                if (weightText.getText().toString().equals("0") | heightText.getText().toString().equals("0") | ageText.getText().toString().equals("0")) {        
 
                 } else {
                     bmiCalculateButton.onClick(view, weightText, heightText);
