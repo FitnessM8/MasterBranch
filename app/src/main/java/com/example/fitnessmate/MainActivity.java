@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         heightText = (TextView) findViewById(R.id.height_Number2);
         button = (Button) findViewById(R.id.Calculate_Button);
         weightBar.setMax(300);
-        heightBar.setMax(220);
+        heightBar.setMax(300);
 
         male = findViewById(R.id.Male);
         female = findViewById(R.id.Female);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.genderselected));
                 female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.gendernotselected));
-                typeofuser = "Memale";
+                typeofuser = "Male";
             }
         });
 
