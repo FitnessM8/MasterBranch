@@ -1,12 +1,13 @@
 package com.example.fitnessmate;
 
-import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
-import javax.xml.transform.Result;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Calculation extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class Calculation extends AppCompatActivity {
     double valueheightmeters;
     private static String bmiString;
     private static String bmiResult;
+    List<Double> results = new ArrayList<Double>();
+
 
     public void onClick(View view, TextView weightText, TextView heightText) {
 
@@ -26,11 +29,13 @@ public class Calculation extends AppCompatActivity {
 
         bmi = (valueweight / (valueheightmeters * valueheightmeters));
         bmiString = String.format("%.1f" , bmi);
+        results.add(bmi);
 
         Log.d("Tag", String.valueOf(valueheightmeters));
 
         if (bmi >= 30) {
             Log.d("Lihavuus", String.valueOf(bmi));
+
             bmiResult = "Lihavuus (normaali painoindeksi: 18.5 - 25)! Paras tapa pudottaa painoa on syömällä terveellisesta ja urheilulla. Vinkkejä saat painamalla alla olevasta napista.";
         } else if (bmi >= 25) {
             Log.d("Lievä lihavuus", String.valueOf(bmi));
@@ -44,11 +49,20 @@ public class Calculation extends AppCompatActivity {
         }
 
     }
-    public String haeBmi() {
+
+    /**
+     * Get calculated BMI result as a string
+     * @return Calculated BMI result as a string
+     */
+    public String getBmi() {
         return this.bmiString;
     }
 
-    public String haeLuokitus() {
+    public String getClassification() {
         return this.bmiResult;
+    }
+
+    public List<Double> getResults () {
+        return this.results;
     }
 }

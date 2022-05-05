@@ -1,22 +1,21 @@
 package com.example.fitnessmate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.SharedMemory;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ListView;
 
-import java.util.List;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 public class PreviousResults extends AppCompatActivity {
-
-    ListView results;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +25,12 @@ public class PreviousResults extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_previous_results);
 
-        results = findViewById(R.id.resultList);
-
-        SharedPreferences bmiHistory = getApplicationContext().getSharedPreferences("ResultHistory", Context.MODE_PRIVATE);
-        String result = bmiHistory.getString("result", "");
-
-
     }
+
+
 
     public void backToStart(View view) {
         Intent backIntent = new Intent(PreviousResults.this, MainActivity.class);
         startActivity(backIntent);
-    };
+    }
 }

@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/Female"
-        android:drawable="@drawable/genderselected"
+        android:drawable="@drawable/selected"
         android:layout_width="99dp"
         android:layout_height="98dp"
         android:layout_marginTop="80dp"

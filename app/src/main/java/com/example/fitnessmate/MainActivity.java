@@ -53,20 +53,23 @@ public class MainActivity extends AppCompatActivity {
         male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.genderselected));
-                female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.gendernotselected));
-                typeofuser = "Male";
+                male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.selected));
+                female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.notselected));
+                typeofuser = "Memale";
             }
         });
+
 
         female.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.genderselected));
-                male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.gendernotselected));
+                female.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.selected));
+                male.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.notselected));
                 typeofuser = "Female";
-                    }
-                });
+
+
+            }
+        });
 
 
         BarListener.barListener(ageBar, ageText);
@@ -79,25 +82,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (weightText.getText().toString().equals("0") | heightText.getText().toString().equals("0") | ageText.getText().toString().equals("0"))  {
+                if (weightText.getText().toString().equals("0") | heightText.getText().toString().equals("0") | ageText.getText().toString().equals("0")) {
                     Log.d("Error", String.valueOf(weightText));
-                }
-                else {
+
+                } else {
+
+
                     bmiCalculateButton.onClick(view, weightText, heightText);
 
-                    String bmi = bmiCalculateButton.haeBmi();
-                    String bmiLuokka = bmiCalculateButton.haeLuokitus();
+                    String bmi = bmiCalculateButton.getBmi();
+                    String bmiLuokka = bmiCalculateButton.getClassification();
 
-                    Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
+                    Intent intent = new Intent(MainActivity.this, DisplayResultActivity.class);
                     intent.putExtra(BMI_RESULT_Number, bmi);
                     intent.putExtra(BMI_RESULT_STRING, bmiLuokka);
                     startActivity(intent);
                 }
             }
         });
-
-
     }
-
-
 }

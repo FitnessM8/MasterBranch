@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ADE8D6D6"
-    tools:context=".DisplayMessageActivity">
+    tools:context=".DisplayResultActivity">
 
     <TextView
         android:id="@+id/bmi_result"
