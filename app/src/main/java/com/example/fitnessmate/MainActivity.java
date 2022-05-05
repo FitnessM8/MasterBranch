@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         heightText = (TextView) findViewById(R.id.height_Number2);
         button = (Button) findViewById(R.id.Calculate_Button);
         weightBar.setMax(300);
-        heightBar.setMax(220);
+        heightBar.setMax(300);
 
         male = findViewById(R.id.Male);
         female = findViewById(R.id.Female);
@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (weightText.getText().toString().equals("0") | heightText.getText().toString().equals("0") | ageText.getText().toString().equals("0")) {
                     Log.d("Error", String.valueOf(weightText));
+
                 } else {
 
 
