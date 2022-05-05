@@ -13,14 +13,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.fitnessmate.R;
-
-public class DisplayMessageActivity extends AppCompatActivity {
-
-    Button backButton;
+public class DisplayResultActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +40,12 @@ public class DisplayMessageActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        Intent backIntent = new Intent(DisplayMessageActivity.this, MainActivity.class);
+        Intent backIntent = new Intent(DisplayResultActivity.this, MainActivity.class);
         startActivity(backIntent);
     };
 
     public void previousResults(View view) {
-        Intent previousresults = new Intent(DisplayMessageActivity.this, PreviousResults.class);
+        Intent previousresults = new Intent(DisplayResultActivity.this, PreviousResults.class);
         startActivity(previousresults);
     };
 }
