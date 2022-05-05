@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.FileNotFoundException;
+
 import javax.xml.transform.Result;
 
 public class Calculation extends AppCompatActivity {
@@ -44,11 +47,16 @@ public class Calculation extends AppCompatActivity {
         }
 
     }
-    public String haeBmi() {
+
+    /**
+     * Get calculated BMI result as a string
+     * @return Calculated BMI result as a string
+     */
+    public String getBmi() {
         return this.bmiString;
     }
 
-    public String haeLuokitus() {
+    public String getClassification() {
         return this.bmiResult;
     }
 }

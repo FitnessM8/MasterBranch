@@ -16,7 +16,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".DisplayMessageActivity"
+            android:name=".DisplayResultActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
