@@ -14,16 +14,23 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
 
+        /**
+         * @Matias Naakka
+         * Splashscreen opens up with hidden title
+         */
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent intent=new Intent(SplashScreenActivity.this,MainActivity.class);
-                startActivity(intent);
+                Intent Splash=new Intent(SplashScreenActivity.this,MainActivity.class);
+                startActivity(Splash);
                 finish();
             }
+            /**
+             * Setting timeout
+             */
         },2000);
     }
 }
