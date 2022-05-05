@@ -14,7 +14,7 @@
         android:text="EDELLISET TULOKSET:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#298A97"
-        android:textSize="24sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,8 +40,15 @@
         android:id="@+id/oldResults"
         android:layout_width="189dp"
         android:layout_height="203dp"
+        android:gravity="center"
         android:text="TextView"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="239dp" />
+        android:textColor="#298A90"
+        android:textColorHighlight="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

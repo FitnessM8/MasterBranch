@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+/*
+This is the so called "loading screen" when the app turns on.
+
+@author Matias Naakka
+ */
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override

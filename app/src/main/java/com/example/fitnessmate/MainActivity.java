@@ -3,7 +3,9 @@ package com.example.fitnessmate;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     ImageView male, female;
     String typeofuser = "0";
+    String preResults;
+    SharedPreferences results;
+
 
     Calculation bmiCalculateButton = new Calculation();
 
@@ -97,6 +102,14 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra(BMI_RESULT_Number, bmi);
                     intent.putExtra(BMI_RESULT_STRING, bmiLuokka);
                     startActivity(intent);
+
+                    // Tallentaa painoindeksi arvon, jotta käyttäjä voi katsoa myöhemmin tuloksensa @author Arbër Zeqiri
+                    results = getSharedPreferences("PreviousResults", Context.MODE_PRIVATE);
+                    preResults = bmiCalculateButton.getBmi();
+
+                    SharedPreferences.Editor editor = results.edit();
+                    editor.putString("button", preResults);
+                    editor.commit();
                 }
             }
         });
