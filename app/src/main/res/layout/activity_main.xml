@@ -7,6 +7,7 @@
     android:background="#ADE8D6D6"
     tools:context=".MainActivity">
 
+    // @author Matias Naakka
 
     <ImageView
         android:id="@+id/Female"
