@@ -14,15 +14,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-/**
-arbër — tänään klo 20.14
-
- This class call for the activity when the user want to see the BMI result.
- It gets the information from the MainActivity.java and Calculation.java and displays them here.
- It also has a couple of intents to move from activity to another.
-
- @author Arbër Zeqiri
- */
 
 /**
 This class call for the activity when the user want to see the BMI result.

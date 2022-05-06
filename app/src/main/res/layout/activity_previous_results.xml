@@ -7,6 +7,8 @@
     android:background="#ADE8D6D6"
     tools:context=".PreviousResults">
 
+    // @author Arbër Zeqiri
+
     <TextView
         android:id="@+id/previous_bmi_results_text"
         android:layout_width="wrap_content"
